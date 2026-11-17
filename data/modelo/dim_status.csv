@@ -1,0 +1,4 @@
+sk_status,nm_status,grupo_status
+1,Aberto,pendente
+2,Cancelada,cancelado
+3,Finalizada,finalizado

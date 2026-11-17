@@ -1,0 +1,8 @@
+sk_servico,nm_servico,categoria_drenagem,sk_assunto
+1,Córrego - solicitar limpeza,manutencao,1
+2,Drenagem de água da chuva - Bueiros e bocas de lobo,manutencao,2
+3,Microdrenagem,manutencao,2
+4,Reformar galerias de águas de chuvas (pluviais),manutencao,2
+5,"Solicitar limpeza de bueiros, boca de lobo e poços de visita",manutencao,2
+6,Alagamento,alagamento_cidadao,3
+7,Rompimento de galeria de águas pluviais,manutencao,3
