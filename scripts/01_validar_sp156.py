@@ -11,10 +11,10 @@ O que este script faz:
   5. Mostra os serviços de DRENAGEM encontrados e quantos caem na temporada
      configurada em INICIO_TEMPORADA / FIM_TEMPORADA (padrão: out/2025–mar/2026,
      que o portal publica nos arquivos 4º TRI 2025 e 1º TRI 2026).
-  6. Imprime um diagnóstico e salva tudo em staging/validacao_sp156.md.
+  6. Imprime um diagnóstico e salva tudo em data/staging/validacao_sp156.md.
 
 Como rodar (a temporada cruza dois trimestres, então passe os dois arquivos):
-  python scripts/01_validar_sp156.py data/raw/sp156/sp156_2025_q4.csv data/raw/sp156/sp156_2026_q1.csv
+  python scripts/01_validar_sp156.py data/raw/sp156/arquivo-final-4-trim-25.csv data/raw/sp156/arquivo-final-1-trim-26.csv
 
 Requisito: pandas (pip install pandas)
 """
@@ -303,7 +303,7 @@ if __name__ == "__main__":
     relatorio = montar_relatorio(resultados)
     print("\n" + relatorio)
 
-    saida = Path("data/raw/staging/validacao_sp156.md")
+    saida = Path("data/staging/validacao_sp156.md")
     saida.parent.mkdir(parents=True, exist_ok=True)
     saida.write_text(relatorio, encoding="utf-8")
     print(f"\nRelatório salvo em {saida}")

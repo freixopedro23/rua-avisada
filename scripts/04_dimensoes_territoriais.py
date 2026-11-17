@@ -96,8 +96,8 @@ def montar_dim_data():
     dim["ano_mes"] = dim["data"].dt.strftime("%Y-%m")
     dim["trimestre"] = dim["data"].dt.quarter
     dim["dia"] = dim["data"].dt.day
-    dim["dia_semana"] = dim["data"].dt.dayofweek.map(NOMES_DIA)
-    dim["fim_de_semana"] = (dim["data"].dt.dayofweek >= 5).map({True: "S", False: "N"})
+    dim["dia_semana"] = dim["data"].dt.day_of_week.map(NOMES_DIA)
+    dim["fim_de_semana"] = (dim["data"].dt.day_of_week >= 5).map({True: "S", False: "N"})
     dim["temporada_chuva"] = dim["mes"].isin(MESES_CHUVA).map({True: "S", False: "N"})
     dim["data"] = dim["data"].dt.date
     return dim
